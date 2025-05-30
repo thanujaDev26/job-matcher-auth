@@ -1,0 +1,15 @@
+Installed Libraries at the 1st step
+
+go mod init gofiber-auth
+go get github.com/gofiber/fiber/v2
+go get github.com/joho/godotenv
+go get gorm.io/gorm
+go get gorm.io/driver/postgres
+go get golang.org/x/crypto/bcrypt
+go get github.com/golang-jwt/jwt/v5
+
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+
+go get gorm.io/driver/mysql
+
+
