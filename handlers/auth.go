@@ -69,6 +69,12 @@ func ForgotPassword(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{"message": "Reset email sent"})
 }
 
+func GetMessage(c *fiber.Ctx) error {
+	return c.Status(200).JSON(fiber.Map{
+		"message": "Test is Completed",
+	})
+}
+
 func ResetPassword(c *fiber.Ctx) error {
 	var input struct {
 		Token       string `json:"token"`

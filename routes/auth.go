@@ -12,6 +12,7 @@ func Setup(app *fiber.App) {
 	auth.Post("/login", handlers.Login)
 	auth.Post("/forgot", handlers.ForgotPassword)
 	auth.Post("/reset", handlers.ResetPassword)
+	auth.Get("/message", handlers.GetMessage)
 
 	app.Get("/protected-route", middleware.Protected(), func(c *fiber.Ctx) error {
 		userEmail := c.Locals("userEmail").(string)
@@ -20,4 +21,6 @@ func Setup(app *fiber.App) {
 			"email":   userEmail,
 		})
 	})
+
+	
 }
